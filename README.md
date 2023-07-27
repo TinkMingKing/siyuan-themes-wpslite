@@ -1,6 +1,6 @@
-# VSCode Lite
+# WPS Lite
 
-Replicate the interface style of VSCode, fine-tune the layout and color scheme, enhance the visibility of headings, and support both light and dark themes.
+Replicate the interface style of WPS, fine-tune the layout and color scheme, enhance the visibility of headings, and support both light and dark themes.
 
 # Features
 
