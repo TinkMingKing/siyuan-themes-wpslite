@@ -1,0 +1,48 @@
+.dock#dockLeft{
+    margin-left: 5px;
+    border-right: none;
+}
+
+.dock{
+    // background: var(--mk-dock-background);
+    background: rgba(0,0,0,0);
+}
+
+// #2b2d30
+
+.dock#dockRight{
+    border-left: none;
+    margin-right: 5px;
+}
+
+.dock#dockBottom{
+    border-top: none;
+    // .dock__item {
+    //     align-items: center;
+    // }
+}
+
+.dock__item {
+    justify-content: center;
+    border-radius : unset;
+    margin: 5px;
+    color: var(--mk-dock-item-color);
+    svg {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.dock__item:hover, .dock__item--active {
+    background-color: var(--mk-dock-item-background);
+    border-radius: 6px;
+    svg {
+        color: var(--mk-dock-item-svg-color--hover);
+    }
+}
+
+body.body--blur .dock__item--activefocus,
+.dock__item--activefocus {
+    color: unset !important;
+    background-color: var(--mk-dock-item-background) !important;
+}

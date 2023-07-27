@@ -1,43 +1,82 @@
-// 只读标签区域
-.layout-tab-bar.layout-tab-bar--readonly {
-    background-color: var(--mk-tabbar-background-color-item--readonly);
-    border-bottom: none;
-}
-
-
-
 // 活动标签区域
 .layout-tab-bar {
-    background-color: var(--mk-tabbar-background-color);
+    background-color: rgba(0, 0, 0, 0);
     border-bottom: none;
+    overflow: hidden;
 
-    .item.item--focus {
-        background-color: var(--mk-tabbar-background-color-item--focus);
+    .item {
+        background-color: var(--mk-tabbar-item-background);
+        margin: 5px;
+        border-radius: 6px;
 
-        &:after {
-            display: none;
+        &.item--focus {
+            background-color: var(--mk-tabbar-item--focus);
+            margin: 5px 5px 5px 5px;
+            border-radius: 6px;
+            box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &:hover {
+            background-color: var(--mk-tabbar-item--hover);
+        }
+    }
+
+    // 只读标签区域
+    &.layout-tab-bar--readonly {
+        border-bottom: none;
+        flex: none;
+        margin: 0px 5px 0px 5px;
+        .item {
+            background-color: var(--mk-tabbar-item-background);
+            &:hover {
+                box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+            }
+        }
+    }
+
+    &:hover {
+        overflow: auto;
+        &::-webkit-scrollbar-thumb {
+            background-color: #555;
+
+            &:hover {
+                background-color: #333;
+            }
+        }
+
+        &::-webkit-scrollbar {
+
+            opacity: 0;
+            transition: all .2s cubic-bezier(0, 0, .2, 1) 0ms, opacity 1s cubic-bezier(0, 0, 0.2, 1) 0ms;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }
 
+.layout__center [data-type="wnd"][data-id] > .fn__flex {
+    background-color: var(--mk-tabbar-background-color);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
 
-
-body.body--blur{
+body.body--blur {
     .layout-tab-bar {
-        
+
         .item.item--focus {
-            box-shadow: none;
+            box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+
             &:after {
                 display: none;
             }
         }
     }
 }
-
-// 面包屑栏单边阴影
-// .protyle-breadcrumb{
-//     box-shadow: 0px 5px 10px -10px grey;
-// }
 
 // 面包屑栏单边阴影
 .protyle {
@@ -58,19 +97,3 @@ body.body--blur{
         }
     }
 }
-
-// 标签页滚动条
-// .layout-tab-bar{
-//     overflow: hidden;
-//     &::-webkit-scrollbar-thumb {
-//         box-sizing: content-box;
-//         background: #c1c1c1;
-//     }
-//     &::-webkit-scrollbar-corner {
-//         background-color: rgba(0,0,0,0);
-//     }
-//     &::-webkit-scrollbar {
-//         width: 10px;
-//         height: 10px;
-//     }
-// }

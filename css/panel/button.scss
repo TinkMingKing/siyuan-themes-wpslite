@@ -1,0 +1,27 @@
+.b3-button--outline {
+    color: white;
+    background-color: #3b64fc;
+}
+
+.b3-button--outline:hover, .b3-button--outline:focus {
+    background-color: #4f87fe;
+    box-shadow: inset 0 0 0 1px var(--b3-theme-primary);
+}
+
+.b3-switch{
+    &:hover {
+        background-color: #999999;
+    }
+    
+    &:checked {
+    
+        &:hover {
+            background-color: #6287fa;
+        }
+    }
+}
+
+//按钮阴影
+.b3-switch:hover:not(:disabled):before, .b3-switch:focus:not(:disabled):before {
+    display: none;
+}

@@ -1,6 +1,6 @@
 body.body--blur{
     .toolbar{
-        background: var(--mk-toolbar-background--blur);
+        background: rgba(0,0,0,0);
 
         #drag{
             color: var(--mk-toolbar--blur-item);
@@ -22,7 +22,6 @@ body.body--blur{
 
 .toolbar {
     background-color: var(--mk-toolbar-background);
-    
     border-bottom:none;
 
     #drag{
@@ -48,11 +47,12 @@ body.body--blur{
 }
 
 #barWorkspace:hover{
-    background-color: var(--mk-toolbar-item-barWorkspace--hover);
+    background-color: var(--mk-toolbar-item--active);
 }
 
 .toolbar__item--active{
     background-color: var(--mk-toolbar-item--active);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 8%);
 }
 
 #closeWindow:hover {

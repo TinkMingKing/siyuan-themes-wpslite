@@ -1,143 +1,27 @@
-@use "sass:color";
-
 .sy__file {
-    // &:hover {
-    //     div.fn__flex-1 {
-    //         &::-webkit-scrollbar-thumb {
-    //             // background: #c1c1c1;
-    //             visibility: visible;
-    //             // opacity: 1;
-    //         }
-    //     }
-    // }
-
-    div.fn__flex-1 {
-        &:hover {
-
-            &::-webkit-scrollbar-thumb {
-                // background: #c1c1c1;
-                // visibility: visible;
-                background: var(--mk-filetree-scrollbar-thumb);
-                opacity: 1;
-
-            }
-        }
-
-        overflow: auto;
-
-        // &::-webkit-scrollbar {
-        //     width: 10px;
-        // }
-
-        &::-webkit-scrollbar-track-piece {
-            // width: 10px;
-            opacity: 0;
-        }
-
-        &::-webkit-scrollbar-track {
-            background-color: rgba(0, 0, 0, 0);
-        }
-
-        &::-webkit-scrollbar-thumb {
-            // visibility: hidden;
-            //无法设置透明度
-            // opacity: 0;
-            // transition: all .2s cubic-bezier(0, 0, .2, 1) 0ms, opacity .3s cubic-bezier(0, 0, 0.2, 1) 0ms;
-            border-radius: 0;
-            background: rgba(0,0,0,0);
-            box-shadow: none;
-
-            &:hover {
-                background: var(--mk-filetree-scrollbar-thumb--hover);
-            }
-
-            &:active {
-                background: var(--mk-filetree-scrollbar-thumb--active);
-            }
-        }
-    }
 
     .b3-list--background {
-        border-radius: unset;
         .b3-list-item {
-            border-radius: unset;
             padding: 1px 5px;
-            margin: unset;
         }
     }
 
 }
 
-// 拖动条
-.layout__resize--lr::after{
-    visibility: hidden;
-    // background-color: white;
+.b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+    background-color : var(--mk-filetree-item--focus);
+    .b3-list-item__text {
+        color: var(--mk-filetree-item-text);
+        font-weight: bold;
+    } 
 }
 
-.dock#dockLeft{
-    border-right: none;
-}
-
-.dock{
-    background: var(--mk-dock-background);
-}
-
-// #2b2d30
-
-.dock#dockRight{
-    border-left: none;
-}
-
-.dock#dockBottom{
-    border-bottom: none;
-}
-
-// .dock__item {
-//     padding: unset;
-//     padding-top: 10px;
-//     padding-bottom: 10px;
-//     color: var(--b3-theme-on-surface-light);
-//     display: flex;
-//     border-radius: unset;
-//     margin: unset;
-//     justify-content: center;
-// }
-
-// .dock svg {
-//     height: 24px;
-//     width: 24px;
-// }
-
-.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus), .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
-    background-color : var(--mk-filetree-list--hover);
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus):hover {
+        background-color: var(--mk-filetree-item--hover);
 }
 
 
-.dock__item {
-    // font-size: 24px;
-    // align-items: center;
-    justify-content: center;
-    border-radius : unset;
-    margin: 5px;
-    color: var(--mk-dock-item-color);
-    svg {
-        height: 20px;
-        width: 20px;
-    }
-}
-
-.dock__item:hover, .dock__item--active {
-    background-color: unset;
-    svg {
-        color: var(--mk-dock-item-svg-color--hover);
-    }
-}
-
-body.body--blur .dock__item--activefocus,
-.dock__item--activefocus {
-    color: unset !important;
-    background-color: unset !important;
-}
+// #e8e8e8
 
 .block__logo svg {
     display: none;
@@ -148,4 +32,24 @@ body.body--blur .dock__item--activefocus,
     font-weight: bold;
     margin-right: unset;
     margin-left: 8px;
+}
+
+.layout-tab-container {
+    background-color: var(--mk-filetree-background);
+}
+
+.layout {
+    margin: 5px;
+    background-color: var(--mk-toolbar-background);
+    border-radius: 6px;
+    // box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0px 20px 0px var(--mk-layout-shadow);
+}
+
+body div.fn__flex-1.fn__flex {
+    overflow: unset; 
+}
+
+.fn__flex-column, .card__main {
+    min-height: unset;
 }

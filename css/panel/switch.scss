@@ -1,0 +1,17 @@
+.b3-switch {
+    width: 38px;
+    height: 18px;
+}
+
+.b3-switch:after {
+    position: unset;
+}
+
+.b3-switch:checked:after {
+    background-color: white;
+    border-color: white;
+}
+
+.b3-switch:checked {
+    background-color: #4b65f7;
+}

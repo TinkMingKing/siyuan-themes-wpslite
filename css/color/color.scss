@@ -1,48 +1,62 @@
 :root[data-theme-mode="light"] {
 
-    // [区域]
+    // [全局]
+    --mk-background: white;
+    --mk-layout-shadow: rgba(0, 0, 0, 0.08);
+
     // toolbar 顶部工具栏
-    --mk-toolbar-background: #dddddd;
-    --mk-toolbar-background--blur: #e5e5e5;
+    --mk-toolbar-background: #ebebed;
+    --mk-toolbar-background--blur: var(--mk-toolbar-background);
     --mk-toolbar--blur-item: #7b7b7b;
     --mk-toolbar-item: #333333;
     --mk-toolbar-item--hover: #bfbfbf;
-    --mk-toolbar-item--active: #437f5e;
+    --mk-toolbar-item--active: #ffffff;
     --mk-toolbar-item-barWorkspace--hover: #436e5e;
-    --mk-toolbar-text: #ffffff;
+    --mk-toolbar-text: black;
     --mk-toolbar-svg: var(--mk-toolbar-text);
-    --mk-toolbar-text--blur: rgba(255, 255, 255, 0.6);
+    --mk-toolbar-text--blur: rgba(0, 0, 0, 0.651);
     --mk-toolbar-svg--blur: var(--mk-toolbar-text--blur);
 
     // file-tree 文档树
+    --mk-filetree-background: #f5f5f5;
     --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
     --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
     --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
     --mk-filetree-list--hover: #e5e6f0;
+    --mk-filetree-item-text: #2453de;
+    --mk-filetree-item--focus: #e2e6f6;
+    --mk-filetree-item--hover: #e8e8e8;
 
     // tabbar 标签栏
-    --mk-tabbar-background-color: #ececec;
-    --mk-tabbar-background-color-item--readonly: #f3f3f3;
-    --mk-tabbar-background-color-item--focus: #ffffff;
+    --mk-tabbar-background-color: white;
+    --mk-tabbar-background-color-item--readonly: #f5f5f5;
+    --mk-tabbar-item-background: #ededed;
+    --mk-tabbar-item--focus: white;
+    --mk-tabbar-item--hover: #f9f9f9;
 
     // dock
-    --mk-dock-background: #2c2c2c;
+    --mk-dock-background: var(--mk-toolbar-background);
     --mk-dock-item-color: #727272;
-    --mk-dock-item-svg-color--hover: #f4f4f4;
+    --mk-dock-item-background: white;
+    --mk-dock-item-svg-color--hover: black;
     
     // 编辑区
     --mk-protyle-wysiwyg--selection: #cddcf6;
     --mk-protyle-wysiwyg--selection--blur: #e6ebf1;
-    --mk-protyle-content-scrollbar-track-border: var(--mk-scrollbar-track-border);
+    // --mk-protyle-content-scrollbar-track-border: var(--mk-scrollbar-track-border);
     --mk-protyle-content-scrollbar-thumb: var(--mk-scrollbar-thumb);
     --mk-protyle-content-scrollbar-thumb--hover: var(--mk-filetree-scrollbar-thumb--hover);
     --mk-protyle-content-scrollbar-thumb--active: var(--mk-filetree-scrollbar-thumb--active);
 
+        // 设置
+    // --mk-settings-label-background: 
+    --mk-settings-label--hover: #f5f5f5;
+
     // [控件]
-    --mk-scrollbar-track-border: #dcdcdc;
-    --mk-scrollbar-thumb: #c1c1c1;
-    --mk-scrollbar-thumb--hover: #929292;
-    --mk-scrollbar-thumb--active: #666666;
+    // --mk-scrollbar-track-border: #dcdcdc;
+    --mk-scrollbar-thumb: rgb(230, 230, 230);
+    --mk-scrollbar-thumb--hover: rgb(219, 219, 219);
+    --mk-scrollbar-thumb--active: rgb(163, 163, 163);
 
     // [块]
     --mk-block-header-h1: #202124;
@@ -62,22 +76,19 @@
 
 }
 
-// 色彩增减函数
-
-
-
-
-
 :root[data-theme-mode="dark"] {
 
-    // [区域]
+    // [全局]
+    --mk-background: #191919;
+    --mk-layout-shadow: rgba(0, 0, 0, 0.4);
+    
     // toolbar 顶部工具栏
-    --mk-toolbar-background: #3c3c3c;
+    --mk-toolbar-background: #191919;
     --mk-toolbar-background--blur: #323233;
     --mk-toolbar--blur-item: #8e8e8e;
     --mk-toolbar-item: #cccccc;
     --mk-toolbar-item--hover: #565656;
-    --mk-toolbar-item--active: #437f5e;
+    --mk-toolbar-item--active: #383838;
     --mk-toolbar-item-barWorkspace--hover: #436e5e;
     --mk-toolbar-text: #ffffff;
     --mk-toolbar-svg: var(--mk-toolbar-text);
@@ -85,19 +96,27 @@
     --mk-toolbar-svg--blur: var(--mk-toolbar-text--blur);
 
     // file-tree 文档树
+    --mk-filetree-background: #222222;
     --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
     --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
     --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
     --mk-filetree-list--hover: #37373d;
+    --mk-filetree-item-text: #3e8cfa;
+    --mk-filetree-item--focus: #232f42;
+    --mk-filetree-item--hover: #2e2e2e;
 
     // tabbar 标签栏
-    --mk-tabbar-background-color: #2d2d2d;
+    --mk-tabbar-background-color: #1e1e1e;
     --mk-tabbar-background-color-item--readonly: #252526;
-    --mk-tabbar-background-color-item--focus: #1e1e1e;
+    --mk-tabbar-item-background: #222222;
+    --mk-tabbar-item--focus: #343434;
+    --mk-tabbar-item--hover: #2d2d2d;
+
 
     // dock
     --mk-dock-background: #333333;
     --mk-dock-item-color: #727272;
+    --mk-dock-item-background: #2b2b2b;
     --mk-dock-item-svg-color--hover: #f4f4f4;
 
     // 编辑区
@@ -107,6 +126,10 @@
     --mk-protyle-content-scrollbar-thumb: var(--mk-scrollbar-thumb);
     --mk-protyle-content-scrollbar-thumb--hover: var(--mk-filetree-scrollbar-thumb--hover);
     --mk-protyle-content-scrollbar-thumb--active: var(--mk-filetree-scrollbar-thumb--active);
+
+    // 设置
+    // --mk-settings-label-background: 
+    --mk-settings-label--hover: #272727;
 
     // [控件]
     --mk-scrollbar-track-border: #393939;
