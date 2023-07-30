@@ -276,6 +276,10 @@ body.body--blur .toolbar .toolbar__item {
   box-shadow: 0px 0px 20px 0px var(--mk-layout-shadow);
 }
 
+body.body--window .layout {
+  margin: unset;
+}
+
 body div.fn__flex-1.fn__flex {
   overflow: unset;
 }
@@ -287,7 +291,6 @@ body div.fn__flex-1.fn__flex {
 .layout-tab-bar {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: none;
-  overflow: hidden;
 }
 .layout-tab-bar .item {
   background-color: var(--mk-tabbar-item-background);
@@ -308,31 +311,10 @@ body div.fn__flex-1.fn__flex {
 }
 .layout-tab-bar.layout-tab-bar--readonly {
   border-bottom: none;
-  flex: none;
   margin: 0px 5px 0px 5px;
 }
 .layout-tab-bar.layout-tab-bar--readonly .item {
-  background-color: var(--mk-tabbar-item-background);
-}
-.layout-tab-bar.layout-tab-bar--readonly .item:hover {
-  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
-}
-.layout-tab-bar:hover {
-  overflow: auto;
-}
-.layout-tab-bar:hover::-webkit-scrollbar-thumb {
-  background-color: #555;
-}
-.layout-tab-bar:hover::-webkit-scrollbar-thumb:hover {
-  background-color: #333;
-}
-.layout-tab-bar:hover::-webkit-scrollbar {
-  opacity: 0;
-  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0ms, opacity 1s cubic-bezier(0, 0, 0.2, 1) 0ms;
-  transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0ms, opacity 1s cubic-bezier(0, 0, 0.2, 1) 0ms;
-}
-.layout-tab-bar:hover::-webkit-scrollbar:hover {
-  opacity: 1;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .layout__center [data-type=wnd][data-id] > .fn__flex {
@@ -487,33 +469,9 @@ body.body--blur .dock__item--activefocus,
   background-color: var(--mk-filetree-background);
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background: var(--mk-filetree-scrollbar-thumb);
-  box-shadow: none;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--mk-filetree-scrollbar-thumb--hover);
-}
-::-webkit-scrollbar-thumb:active {
-  background: var(--mk-filetree-scrollbar-thumb--active);
-}
-
 .status {
   background-color: rgba(0, 0, 0, 0);
   border-top: unset;
-  color: black;
-}
-.status * {
-  color: black;
 }
 
 body {

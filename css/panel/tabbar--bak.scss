@@ -2,17 +2,17 @@
 .layout-tab-bar {
     background-color: rgba(0, 0, 0, 0);
     border-bottom: none;
-    // overflow: hidden;
+    overflow: hidden;
 
     .item {
         background-color: var(--mk-tabbar-item-background);
-        margin: 5px;
+        margin: 5px 0px 0 0px;
         border-radius: 6px;
 
         &.item--focus {
             background-color: var(--mk-tabbar-item--focus);
-            margin: 5px 5px 5px 5px;
-            border-radius: 6px;
+            margin: 5px 0px  0px 0px;
+            border-radius: 8px;
             box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
 
             &:after {
@@ -28,22 +28,41 @@
     // 只读标签区域
     &.layout-tab-bar--readonly {
         border-bottom: none;
-        // flex: none;
+        flex: none;
         margin: 0px 5px 0px 5px;
         .item {
-            // background-color: var(--mk-tabbar-item-background);
-            background-color: rgba(0, 0, 0, 0);
-            // &:hover {
-            //     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
-            // }
+            background-color: var(--mk-tabbar-item-background);
+            &:hover {
+                box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+            }
         }
     }
 
+    &:hover {
+        overflow: auto;
+        &::-webkit-scrollbar-thumb {
+            background-color: #555;
+
+            &:hover {
+                background-color: #333;
+            }
+        }
+
+        &::-webkit-scrollbar {
+
+            opacity: 0;
+            transition: all .2s cubic-bezier(0, 0, .2, 1) 0ms, opacity 1s cubic-bezier(0, 0, 0.2, 1) 0ms;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 .layout__center [data-type="wnd"][data-id] > .fn__flex {
     background-color: var(--mk-tabbar-background-color);
-    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+    // border-bottom: 1px solid rgba(128, 128, 128, 0.26);
 }
 
 body.body--blur {

@@ -46,6 +46,12 @@
     box-shadow: 0px 0px 20px 0px var(--mk-layout-shadow);
 }
 
+body.body--window {
+    .layout {
+        margin: unset;
+    }
+}
+
 body div.fn__flex-1.fn__flex {
     overflow: unset; 
 }
