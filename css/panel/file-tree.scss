@@ -23,7 +23,7 @@
 
 // #e8e8e8
 
-.block__logo svg {
+.block__logo:not(.fn__pointer) svg {
     display: none;
 }
 

@@ -254,7 +254,7 @@ body.body--blur .toolbar .toolbar__item {
   background-color: var(--mk-filetree-item--hover);
 }
 
-.block__logo svg {
+.block__logo:not(.fn__pointer) svg {
   display: none;
 }
 
@@ -423,6 +423,14 @@ body.body--blur .dock__item--activefocus,
 }
 
 .b3-text-field:not(.b3-text-field--text):hover, .pcr-app .pcr-interaction .pcr-result:not(.b3-text-field--text):hover {
+  box-shadow: inset 0 0 0 1px #4d83f6;
+}
+
+.b3-select:focus {
+  box-shadow: inset 0 0 0 1px #3854da;
+}
+
+.b3-select:hover {
   box-shadow: inset 0 0 0 1px #4d83f6;
 }
 
