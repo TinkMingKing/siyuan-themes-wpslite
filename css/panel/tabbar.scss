@@ -13,7 +13,8 @@
             background-color: var(--mk-tabbar-item--focus);
             margin: 5px 5px 5px 5px;
             border-radius: 6px;
-            box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+            // box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 20%);
 
             &:after {
                 display: none;
@@ -30,6 +31,7 @@
         border-bottom: none;
         // flex: none;
         margin: 0px 5px 0px 5px;
+
         .item {
             // background-color: var(--mk-tabbar-item-background);
             background-color: rgba(0, 0, 0, 0);
@@ -41,7 +43,13 @@
 
 }
 
-.layout__center [data-type="wnd"][data-id] > .fn__flex {
+div[data-type="wnd"]:not(.layout__wnd--active) {
+    .item.item--focus {
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.layout__center [data-type="wnd"][data-id]>.fn__flex {
     background-color: var(--mk-tabbar-background-color);
     border-bottom: 1px solid rgba(128, 128, 128, 0.26);
 }
@@ -50,7 +58,7 @@ body.body--blur {
     .layout-tab-bar {
 
         .item.item--focus {
-            box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 20%);
 
             &:after {
                 display: none;
