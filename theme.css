@@ -270,10 +270,13 @@ body.body--blur .toolbar .toolbar__item {
 }
 
 .layout {
-  margin: 5px 0 0 0;
+  margin: 5px 0 5px 0;
   background-color: var(--mk-toolbar-background);
   border-radius: 6px;
   box-shadow: 0px 0px 20px 0px var(--mk-layout-shadow);
+}
+.layout.fn__flex-column {
+  min-height: unset;
 }
 
 body.body--window .layout {
@@ -282,10 +285,6 @@ body.body--window .layout {
 
 body div.fn__flex-1.fn__flex {
   overflow: unset;
-}
-
-.fn__flex-column {
-  min-height: unset;
 }
 
 .layout-tab-bar {
